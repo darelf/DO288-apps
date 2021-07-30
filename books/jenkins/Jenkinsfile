@@ -125,7 +125,7 @@ pipeline {
                 sh '''
                        oc project ${STAGE_PROJECT}
                        oc new-app --as-deployment-config --name books -i books:stage
-                       oc expose svc ${APP_NAME}
+                       oc expose svc/${APP_NAME}
                    '''
              }
         }
